@@ -1,15 +1,21 @@
-function Card(props){
+import "./CardApresentacao.css"
+
+function Card({usuario}){
     return(
-        <div>
-            <img src={props.usuario.imagem}/>
-            <h1>Nome: {props.usuario.nome}</h1>
-            <h2>Idade: {props.usuario.idade} anos</h2>
-            <a href={props.usuario.github} target="_blank">
-                <box-icon type="logo" name="github" color="blue" size="md" title="github"></box-icon>
-            </a>
-            <a href={props.usuario.linkedin} target="_blank">
-                <box-icon type="logo" name="linkedin" color="blue" size="md" title="linkedin"></box-icon>
-            </a>
+        <div className="cardApresenta">
+            <img className="imgFoto" src={usuario.imagem}/>
+            <div className="cardDados">
+                <h1>{usuario.nome}</h1>
+                <h2>Idade: {usuario.idade} anos</h2>
+                <div className="CardLogoContatos">
+                    <a href={usuario.github} target="_blank">
+                        <img src="../assets/Logo_github.png" />
+                    </a>
+                    <a href={usuario.linkedin} target="_blank">
+                        <img src="../assets/Logo_linkedin.png" />
+                    </a>
+                </div>
+            </div>
         </div>
     )
 }

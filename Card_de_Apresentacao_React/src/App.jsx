@@ -1,8 +1,8 @@
-import Card from "./components/CardApresentacao"
 import './App.css'
+import Card from "./components/CardApresentacao"
 
 function App() {
-  let usuario = {
+  const usuario = {
     nome: 'William Moura',
     idade: 31,
     imagem:'https://avatars.githubusercontent.com/u/86812365?s=96&v=4',
@@ -12,7 +12,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div>
       <Card usuario = {usuario} />      
     </div>
   )
